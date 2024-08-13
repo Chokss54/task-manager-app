@@ -29,6 +29,6 @@ Weakness:
 - I don't understand things as quickly like some people. I need time to read and review new concepts multiple times to fully grasp and digest. So I think my learning might be slow sometimes.
 - My programming skills as a fresh graduate are not very advanced. In university, we covered alot of different languages and frameworks but did not really specialised in one. So I'm like a Jack of all trades, master of none! But in most cases, I still make lots of mistakes as a gradaute developer.
 
-Strengths:7
+Strengths:
 - I'm a very teachable person. I can take criticism and feedback well, using it as an opportunity to improve and learn.
 - I am an adaptable person, always willing to try new things with a 'can-do' attitude, and I consistently strive to add value to the team.
