@@ -30,4 +30,4 @@ https://chokss54.github.io/task-manager-app/
 ``` 
 
 ## Documentations
-The required documentations and Q&A can be found in `Documentation & Questions` file under the root directory.
+The required documentations and Q&A can be found in `Documentation.md` file under the root directory.
