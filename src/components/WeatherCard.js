@@ -6,6 +6,7 @@ const WeatherCard = () => {
   const [geolocation, setGeolocation] = useState({});
   // since we will only have one weather object, I think there's no need to create a weather class to store the data.
   const [weatherData, setWeatherData] = useState({});
+  console.log("env obj: ", process.env)
   const apiKey = process.env.REACT_APP_WEATHER_API;
 
   const extractWeatherData = (dataJson) => {
@@ -23,7 +24,7 @@ const WeatherCard = () => {
     };
 
     setWeatherData(extractedData)
-    console.log("data: ", weatherData) 
+    console.log("data: ", weatherData)
   }
 
   const convertTempToCelcius = (tempInKelvin) => {
@@ -31,27 +32,36 @@ const WeatherCard = () => {
   }
 
   const getGeolocation = () => {
-    try {
-      navigator.geolocation.getCurrentPosition((position) => {
+    navigator.geolocation.getCurrentPosition(
+      (position) => {
         const { latitude, longitude } = position.coords;
-        setGeolocation({ latitude, longitude })
-      })
-    } catch (error) {
-      console.log("error fetching user's geolocation: ", error);
-    }
+        setGeolocation({ latitude, longitude });
+      },
+      (error) => {
+        console.log("Error fetching user's geolocation: ", error);
+      }
+    );
   }
 
   const getWeatherAPI = async () => {
     try {
-      console.log("geo: ", geolocation)
+      if (!geolocation || !geolocation.latitude || !geolocation.longitude) {
+        throw new Error("Geolocation data is not available.");
+      }
+
       const url = `https://api.openweathermap.org/data/3.0/onecall?lat=${geolocation.latitude}&lon=${geolocation.longitude}&exclude=hourly,daily,minutely&appid=${apiKey}`
 
       const response = await fetch(url);
+
+      if (!response.ok) {
+        throw new Error(`Response failure: ${response.status}`);
+      }
+
       const dataResult = await response.json();
       return dataResult;
 
     } catch (error) {
-      console.log("error fetching weather information: ", error);
+      console.log("Error fetching weather api information: ", error);
     }
   }
 
