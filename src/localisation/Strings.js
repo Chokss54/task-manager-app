@@ -1,7 +1,8 @@
 import en from "./locale/en";
 import jp from "./locale/jp";
+import bm from "./locale/bm";
 
-const locales = { en, jp };
+const locales = { en, jp, bm };
 const currentLocale = locales.en;
 
 /**

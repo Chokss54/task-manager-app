@@ -5,6 +5,7 @@ import { TasksContext } from '../utils/TasksContext';
 import TasksList from '../models/Tasks';
 import EditPopup from './EditPopup';
 import '../App.css';
+import { strings } from '../localisation/Strings';
 
 
 const TaskCard = ({ task, onDelete }) => {
@@ -43,7 +44,7 @@ const TaskCard = ({ task, onDelete }) => {
         </div>
         <div className="position-absolute bottom-0 start-0 end-0 d-flex justify-content-between align-items-end py-3 px-4">
           <div className="mb-0 text-muted fs-6">
-            due: {date}
+            {strings("TMAPP.task.dueDate")}{date}
           </div>
           <div className="d-flex gap-2">
             <button className="btn btn-danger" onClick={handleDelete}>

@@ -19,7 +19,13 @@ const en = {
   //form
   "TMAPP.input.title": "Title:",
   "TMAPP.input.description": "Description:",
-  "TMAPP.input.dueDate": "Due Date:"
+  "TMAPP.input.dueDate": "Due Date:",
+
+  //task
+  "TMAPP.task.dueDate": "Due: ",
+
+  //weather
+  "TMAPP.weather.celsius": "°C",
 }
 
 export default en;

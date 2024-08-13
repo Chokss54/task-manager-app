@@ -4,8 +4,8 @@
 
 const jp = {
   //header
-  "TMAPP.title": "タスク管理アプリ",
-  "TMAPP.description": "これはタスクを管理するための小さなダミーアプリケーションです。",
+  "TMAPP.title": "タスクマネージャー",
+  "TMAPP.description": "これはタスク管理のための小さなダミーアプリケーションです。",
 
   //popup
   "TMAPP.popup.add.header": "新しいタスクを追加",
@@ -19,6 +19,13 @@ const jp = {
   //form
   "TMAPP.input.title": "タイトル：",
   "TMAPP.input.description": "説明：",
+  "TMAPP.input.dueDate": "期限日：",
+
+  //task
+  "TMAPP.task.dueDate": "期限: ",
+
+  //weather
+  "TMAPP.weather.celsius": "°C",
 }
 
 export default jp;
