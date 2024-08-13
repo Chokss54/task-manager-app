@@ -12,6 +12,11 @@ cd <repository>
 ```
 npm install
 ```
+### API Keys
+We are using the OpenWeatherApi in this app, so create a .env file in the root directory and paste your api key like so:
+```
+REACT_APP_WEATHER_API=<your api key>
+```
 
 ### Running the App
 ```
